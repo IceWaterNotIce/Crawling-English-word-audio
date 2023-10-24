@@ -5,4 +5,10 @@ Crawling English word audio from Cambridge Dictionary
 
 1. Dowland and unzip
 2. enter your words to words.txt
-3. run main.py then the audio will dowland to folder Audio
+  - format:
+    ```
+    test
+    hello
+    world
+    ```
+4. run main.py then the audio will dowland to folder Audio
