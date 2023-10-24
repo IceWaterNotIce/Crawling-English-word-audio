@@ -12,4 +12,4 @@ Crawling English word audio from Cambridge Dictionary
     hello
     world
     ```
-5. run main.py then the audio will dowland to folder Audio
+3. run main.py then the audio will dowland to folder Audio
