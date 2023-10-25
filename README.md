@@ -2,7 +2,7 @@
 Crawling English word audio from Cambridge Dictionary
 
 ## How to use
-If you have not install session , run `pip install session` first.
+If you have not install selenium , run `pip install selenium` first.
 1. Dowland and unzip
 2. enter your words to words.txt
   
