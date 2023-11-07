@@ -1,3 +1,8 @@
+# Description: This program is used to download the audio of words from the Cambridge Dictionary website.
+#            The words are read from the words.txt file.
+# 
+
+
 import requests
 import os
 from selenium import webdriver
@@ -24,8 +29,11 @@ for searchword in searchwords:
     # Navigate to the website
     driver.get("https://dictionary.cambridge.org/zht/%E8%A9%9E%E5%85%B8/%E8%8B%B1%E8%AA%9E-%E6%BC%A2%E8%AA%9E-%E7%B9%81%E9%AB%94/")
 
+    # Wait 30s for the audio element to be loaded
+    wait = WebDriverWait(driver, 30)
+
     # Enter the word
-    Input_searchword = driver.find_element(By.ID, "searchword")
+    Input_searchword = wait.until(EC.presence_of_element_located((By.ID, "searchword")))
     Input_searchword.send_keys(searchword)
     Input_searchword.submit()
 
