@@ -6,7 +6,7 @@ Crawling English word audio from Cambridge Dictionary
 
 Need :
 
-1. python3 
+1. python3
 1. selenium
 
 If you have not install python3 ,  install python3 first.
@@ -24,4 +24,3 @@ If you have not install selenium , run `pip install selenium` first.
     ```
 
 3. run main.py then the audio will dowland to folder Audio
-
