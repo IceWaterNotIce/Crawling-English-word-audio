@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 # Read words form words.txt
 file_path = 'words.txt'
@@ -19,9 +20,9 @@ with open(file_path, 'r') as file:
 searchwords = [line.strip() for line in string_list]
 
 # Create a new instance of the Chrome driver
-driver_path = 'chromedriver-win64\\chromedriver.exe'
-service = Service(driver_path)
-driver = webdriver.Chrome(service=service)
+options = webdriver.ChromeOptions()
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service, options=options)
 wait = WebDriverWait(driver, 10)
 
 for searchword in searchwords:
